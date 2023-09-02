@@ -1,0 +1,126 @@
+:root {
+    --back: #fff;
+    --text: #000;
+    --shadow: null;
+    --sun: rgb(231, 153, 9);
+    --mun: rgb(245, 222, 152);
+}
+
+.dark-mode {
+    --back: #000;
+    --text: #fff;
+    --shadow: rgb(250, 252, 255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--back);
+    transition: all 1s ease-in-out;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.toogle-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 80%;
+}
+
+input {
+    padding: .5rem 1rem;
+    width: 350px;
+    min-width: 200px;
+    border: 1px solid var(--text);
+    background: transparent;
+    outline: none;
+    transition: border .2s;
+    color: var(--text);
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: var(--text);
+}
+
+.titulo {
+    text-transform: uppercase;
+    color: var(--text);
+    text-shadow: 0 0 5px var(--shadow);
+}
+
+/*Toogle dark mode*/
+
+.toogle {
+    width: 60px;
+    height: 29px;
+    background: var(--text);
+    border-radius: 20px;
+    transform: scale(1.2);
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked+label .toogle-btn {
+    transform: translateX(33px);
+    
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+.toogle-btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--back);
+    transform: scale(1.1);
+    position: absolute;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+i:nth-child(1) {
+    color: var(--sun);
+}
+
+i:nth-child(2) {
+    color: var(--mun);
+}

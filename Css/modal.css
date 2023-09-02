@@ -1,0 +1,64 @@
+:root {
+    --back-modal: rgba(0, 0, 0, .9);
+    --text-modal: #fff;
+    --shadow-modal: rgba(0, 0, 0, 0.5);
+    --sun: rgb(231, 153, 9);
+    --mun: rgb(245, 222, 152);
+    --button: rgb(44, 196, 17);
+    --button-hover: rgb(50, 138, 34);
+}
+
+.dark-mode {
+    --back-modal: #f9f9f9;
+    --text-modal: #000;
+    --shadow-modal: null;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.alert {
+    position: absolute;
+    padding: 2rem 3rem;
+    width: 350px;
+    height: 160px;
+    background: var(--back-modal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 5px 5px 10px var(--shadow-modal);
+}
+
+.alert-msg {
+    color: var(--text-modal);
+    font-size: 1.3rem;
+}
+
+.alert button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(44, 196, 17);
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: background .2s;
+}
+
+.alert button:hover {
+    background: var(--button-hover);
+}
+
+.alert button i {
+    color: white;
+}
